@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swipeable_card_stack/swipeable_card_stack.dart';
+import 'package:tattoo_social_app/models/tattoo_model.dart';
 
 class TattooSwipeScreen extends StatefulWidget {
   const TattooSwipeScreen({super.key});
@@ -9,7 +10,7 @@ class TattooSwipeScreen extends StatefulWidget {
 }
 
 class _TattooSwipeScreenState extends State<TattooSwipeScreen> {
-  List<Tattoo> tattooModels = []; // Liste des modèles de tatouages
+  List<TattooModel> tattooModels = []; // Liste des modèles de tatouages
 
   @override
   Widget build(BuildContext context) {
@@ -41,21 +42,21 @@ class _TattooSwipeScreenState extends State<TattooSwipeScreen> {
     );
   }
 
-  Widget _buildTattooCard(Tattoo tattoo) {
+  Widget _buildTattooCard(TattooModel tattoo) {
     return Card(
       child: Image.network(tattoo.imageUrl),
     );
   }
 
-  void likeTattoo(Tattoo tattoo) {
+  void likeTattoo(TattooModel tattoo) {
     // Implement your logic for liking a tattoo
   }
 
-  void dislikeTattoo(Tattoo tattoo) {
+  void dislikeTattoo(TattooModel tattoo) {
     // Implement your logic for disliking a tattoo
   }
 
-  void superLikeTattoo(Tattoo tattoo) {
+  void superLikeTattoo(TattooModel tattoo) {
     // Implement your logic for super liking a tattoo and opening communication
   }
 }
