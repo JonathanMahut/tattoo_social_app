@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 
 class AppConfig {
   // Configurations générales de l'application
-  static const String appName = "Tattoo Social App";
-  static const String appVersion = "1.0.0";
-  static const String environment = "development"; // ou "production"
+  // static const String appName = "Tatoo Connect";
+  // static const String appVersion = "1.0.0";
+  // static const String environment = "development"; // ou "production"
 
-  // Configurations Firebase
-  static const String firebaseProjectId = "votre-projet-firebase-id";
-  static const String firebaseApiKey = "votre-api-key-firebase";
-  static const String firebaseAppId = "votre-app-id-firebase";
-  static const String firebaseMessagingSenderId = "votre-sender-id";
-  static const String firebaseStorageBucket =
-      "votre-storage-bucket.appspot.com";
+  // // Configurations Firebase
+  // static const String firebaseProjectId = "votre-projet-firebase-id";
+  // static const String firebaseApiKey = "votre-api-key-firebase";
+  // static const String firebaseAppId = "votre-app-id-firebase";
+  // static const String firebaseMessagingSenderId = "votre-sender-id";
+  // static const String firebaseStorageBucket =
+  //     "votre-storage-bucket.appspot.com";
 
   // Configurations Facebook
   static const String facebookAppId = "votre-facebook-app-id";
@@ -39,14 +39,36 @@ class AppConfig {
 
   // Paramètres de l'application
   static const int maxUploadableImages = 10;
-  static const List<String> supportedTattooStyles = [
-    'Traditional',
-    'Realism',
-    'Watercolor',
-    'Tribal',
-    'Japanese'
-  ];
-  static const int maxBioLength = 500;
+  // static const List<String> supportedTattooStyles = [
+  //   'Traditional',
+  //   'Realism',
+  //   'Watercolor',
+  //   'Tribal',
+  //   'Japanese',
+  //   "Manga",
+  //   "Modern",
+  //   "Abstract",
+  //   "Retro",
+  //   "Minimalism",
+  //   "Neo-traditional",
+  //   "Trash Polka",
+  //   "Black",
+  //   "Floral",
+  //   "New School",
+  //   "Traditional US",
+  //   "Horror",
+  //   "Ornemental",
+  //   "Dot",
+  //   "Animal",
+  //   "Portrait",
+  //   "Biomecanical",
+  //   "Lettring",
+  //   "Polynesian",
+  //   "Geometric",
+  //   "Symbolism",
+  //   "Esoteric"
+  // ];
+  // static const int maxBioLength = 500;
 
   // Paramètres de pagination pour Firestore
   static const int firestorePageSize = 20;
@@ -64,6 +86,7 @@ class AppConfig {
     Locale('en', 'US'),
   ];
 
+/*
   // URLs importantes
   static const String termsOfServiceUrl = "https://votreapp.com/terms";
   static const String privacyPolicyUrl = "https://votreapp.com/privacy";
@@ -71,4 +94,5 @@ class AppConfig {
   // Paramètres sociaux
   static const String twitterHandle = "@votreapp";
   static const String instagramHandle = "votreapp";
+  */
 }

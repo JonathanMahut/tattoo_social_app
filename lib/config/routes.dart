@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tattoo_social_app/screens/auth_screen.dart';
 import 'package:tattoo_social_app/screens/feed_screen.dart';
+import 'package:tattoo_social_app/screens/home_screen.dart';
+import 'package:tattoo_social_app/screens/profile_screen.dart';
 import 'package:tattoo_social_app/screens/tattoo_swipe_screen.dart';
 
 class AppRoutes {
@@ -12,17 +15,17 @@ class AppRoutes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case auth:
-        return MaterialPageRoute(builder: (_) => AuthScreen());
+        return MaterialPageRoute(builder: (_) => const AuthScreen());
       case home:
-        return MaterialPageRoute(builder: (_) => HomeScreen());
+        return MaterialPageRoute(builder: (_) => const HomePage());
       case feed:
-        return MaterialPageRoute(builder: (_) => FeedScreen());
+        return MaterialPageRoute(builder: (_) => const FeedScreen());
       case profile:
         // Vous pouvez passer des arguments si nécessaire
         // final args = settings.arguments as Map<String, dynamic>;
-        return MaterialPageRoute(builder: (_) => ProfileScreen());
+        return MaterialPageRoute(builder: (_) => const ProfileScreen());
       case tattooSwipe:
-        return MaterialPageRoute(builder: (_) => TattooSwipeScreen());
+        return MaterialPageRoute(builder: (_) => const TattooSwipeScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

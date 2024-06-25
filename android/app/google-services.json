@@ -1,0 +1,226 @@
+{
+  "project_info": {
+    "project_number": "1024248956501",
+    "project_id": "test-firebase-916f2",
+    "storage_bucket": "test-firebase-916f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024248956501:android:eafc503ce8efdf61efb6dc",
+        "android_client_info": {
+          "package_name": "com.chat.messenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1024248956501-0knrvj0ugba33c3ki984g5bomrcv17ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsmKnmvpMCNSLl8XJoXBQmuFVNXk5iGv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1024248956501-0knrvj0ugba33c3ki984g5bomrcv17ai.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1024248956501-0mqulo9f12ahniu6190vq9mbbss8l63k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.messageapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024248956501:android:65f8affee5ff1804efb6dc",
+        "android_client_info": {
+          "package_name": "com.edenik.firebasegroupchats"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1024248956501-0knrvj0ugba33c3ki984g5bomrcv17ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsmKnmvpMCNSLl8XJoXBQmuFVNXk5iGv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1024248956501-0knrvj0ugba33c3ki984g5bomrcv17ai.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1024248956501-0mqulo9f12ahniu6190vq9mbbss8l63k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.messageapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024248956501:android:cd6bc801fe84211aefb6dc",
+        "android_client_info": {
+          "package_name": "com.example.chat_me"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1024248956501-0knrvj0ugba33c3ki984g5bomrcv17ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsmKnmvpMCNSLl8XJoXBQmuFVNXk5iGv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1024248956501-0knrvj0ugba33c3ki984g5bomrcv17ai.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1024248956501-0mqulo9f12ahniu6190vq9mbbss8l63k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.messageapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024248956501:android:b39a780cafd1bc7befb6dc",
+        "android_client_info": {
+          "package_name": "com.example.firebasetest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1024248956501-0knrvj0ugba33c3ki984g5bomrcv17ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsmKnmvpMCNSLl8XJoXBQmuFVNXk5iGv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1024248956501-0knrvj0ugba33c3ki984g5bomrcv17ai.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1024248956501-0mqulo9f12ahniu6190vq9mbbss8l63k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.messageapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024248956501:android:1cd77608696543c8efb6dc",
+        "android_client_info": {
+          "package_name": "com.tatooconnect.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1024248956501-0knrvj0ugba33c3ki984g5bomrcv17ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsmKnmvpMCNSLl8XJoXBQmuFVNXk5iGv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1024248956501-0knrvj0ugba33c3ki984g5bomrcv17ai.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1024248956501-0mqulo9f12ahniu6190vq9mbbss8l63k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.messageapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024248956501:android:9bb7cef45313fe08efb6dc",
+        "android_client_info": {
+          "package_name": "com.tauseef.whatsappclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1024248956501-0knrvj0ugba33c3ki984g5bomrcv17ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsmKnmvpMCNSLl8XJoXBQmuFVNXk5iGv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1024248956501-0knrvj0ugba33c3ki984g5bomrcv17ai.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1024248956501-0mqulo9f12ahniu6190vq9mbbss8l63k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.messageapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,62 +1,61 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tindercard/flutter_tindercard.dart';
+import 'package:swipeable_card_stack/swipeable_card_stack.dart';
 
 class TattooSwipeScreen extends StatefulWidget {
+  const TattooSwipeScreen({super.key});
+
   @override
   _TattooSwipeScreenState createState() => _TattooSwipeScreenState();
 }
 
 class _TattooSwipeScreenState extends State<TattooSwipeScreen> {
-  List<TattooModel> tattooModels = []; // Liste des modèles de tatouages
+  List<Tattoo> tattooModels = []; // Liste des modèles de tatouages
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
+        child: SizedBox(
           height: MediaQuery.of(context).size.height * 0.7,
-          child: TinderSwapCard(
-            totalNum: tattooModels.length,
-            cardBuilder: (context, index) => Card(
-              child: Image.network(tattooModels[index].imageUrl),
-            ),
-            swipeCompleteCallback:
-                (CardSwipeOrientation orientation, int index) {
-              if (orientation == CardSwipeOrientation.RIGHT) {
-                // Like
+          child: SwipeableCardsSection(
+            // Provide your list of TattooModel instances here
+            items:
+                tattooModels.map((tattoo) => _buildTattooCard(tattoo)).toList(),
+            // Define swipe directions and corresponding actions
+            onCardSwiped: (direction, index, widget) {
+              if (direction == Direction.right) {
                 likeTattoo(tattooModels[index]);
-              } else if (orientation == CardSwipeOrientation.LEFT) {
-                // Dislike
+              } else if (direction == Direction.left) {
                 dislikeTattoo(tattooModels[index]);
-              } else if (orientation == CardSwipeOrientation.UP) {
-                // Super Like
+              } else if (direction == Direction.up) {
                 superLikeTattoo(tattooModels[index]);
+              } else if (direction == Direction.down) {
+                // Handle swipe down action
+                // Display details of Tatoo *model
               }
             },
+            context: context,
           ),
         ),
       ),
     );
   }
 
-  void likeTattoo(TattooModel tattoo) {
-    // Logique pour liker un tatouage
+  Widget _buildTattooCard(Tattoo tattoo) {
+    return Card(
+      child: Image.network(tattoo.imageUrl),
+    );
   }
 
-  void dislikeTattoo(TattooModel tattoo) {
-    // Logique pour disliker un tatouage
+  void likeTattoo(Tattoo tattoo) {
+    // Implement your logic for liking a tattoo
   }
 
-  void superLikeTattoo(TattooModel tattoo) {
-    // Logique pour super liker un tatouage et ouvrir la communication
+  void dislikeTattoo(Tattoo tattoo) {
+    // Implement your logic for disliking a tattoo
   }
-}
 
-class TattooModel {
-  final String id;
-  final String imageUrl;
-  final String artistId;
-
-  TattooModel(
-      {required this.id, required this.imageUrl, required this.artistId});
+  void superLikeTattoo(Tattoo tattoo) {
+    // Implement your logic for super liking a tattoo and opening communication
+  }
 }
