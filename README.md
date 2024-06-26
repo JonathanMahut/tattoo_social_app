@@ -72,7 +72,6 @@ N'oubliez pas de remplacer les valeurs comme "votre-projet-firebase-id" par vos 
 
 # Géolocalisation
 
-
 N'oubliez pas d'ajouter les permissions nécessaires dans vos fichiers de configuration Android et iOS :
 
 Pour Android, ajoutez ces lignes dans `android/app/src/main/AndroidManifest.xml` :
@@ -87,10 +86,7 @@ Pour iOS, ajoutez ces lignes dans `ios/Runner/Info.plist` :
 **<**key**>**NSLocationAlwaysUsageDescription**</**key**>**
 **<**string**>**This app needs access to location when in the background.**</**string**>**
 
-
-
 # Image Picker
-
 
 N'oubliez pas d'ajouter les permissions nécessaires dans vos fichiers de configuration Android et iOS :
 
@@ -98,7 +94,6 @@ Pour Android, ajoutez ces lignes dans `android/app/src/main/AndroidManifest.xml`
 
 <pre><div class="relative flex flex-col rounded-lg"><div class="text-text-300 absolute pl-3 pt-2.5 text-xs">xml</div><div class="pointer-events-none sticky z-20 my-0.5 ml-0.5 flex items-center justify-end px-1.5 py-1 mix-blend-luminosity top-12"><div class="from-bg-300/90 to-bg-300/70 pointer-events-auto rounded-md bg-gradient-to-b p-0.5 backdrop-blur-md"><button class="flex flex-row items-center gap-1 rounded-md p-1 py-0.5 text-xs transition-opacity delay-100 hover:bg-bg-200"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 256 256" class="text-text-500 mr-px -translate-y-[0.5px]"><path d="M200,32H163.74a47.92,47.92,0,0,0-71.48,0H56A16,16,0,0,0,40,48V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V48A16,16,0,0,0,200,32Zm-72,0a32,32,0,0,1,32,32H96A32,32,0,0,1,128,32Zm72,184H56V48H82.75A47.93,47.93,0,0,0,80,64v8a8,8,0,0,0,8,8h80a8,8,0,0,0,8-8V64a47.93,47.93,0,0,0-2.75-16H200Z"></path></svg><span class="text-text-200 pr-0.5">Copy</span></button></div></div><div><div class="code-block__code !my-0 !rounded-lg !text-sm !leading-relaxed"><code class="language-xml"><span><span class="token"><</span><span class="token">uses-permission</span><span class="token"></span><span class="token">android:</span><span class="token">name</span><span class="token">=</span><span class="token">"</span><span class="token">android.permission.READ_EXTERNAL_STORAGE</span><span class="token">"</span><span class="token"></span><span class="token">/></span><span>
 </span></span><span><span></span><span class="token"><</span><span class="token">uses-permission</span><span class="token"></span><span class="token">android:</span><span class="token">name</span><span class="token">=</span><span class="token">"</span><span class="token">android.permission.CAMERA</span><span class="token">"</span><span class="token"></span><span class="token">/></span></span></code></div></div></div></pre>
-
 
 Pour iOS, ajoutez ces lignes dans `ios/Runner/Info.plist` :
 
@@ -108,7 +103,6 @@ Pour iOS, ajoutez ces lignes dans `ios/Runner/Info.plist` :
 </span></span><span><span></span><span class="token"><</span><span class="token">string</span><span class="token">></span><span>This app needs access to camera for profile picture capture.</span><span class="token"></</span><span class="token">string</span><span class="token">></span></span></code></div></div></div></pre>
 
 Pour le cropping d'image :
-
 
 Pour que cela fonctionne correctement sur Android, vous devez également ajouter l'activité de recadrage dans votre fichier `android/app/src/main/AndroidManifest.xml` :
 
@@ -122,27 +116,35 @@ Et pour iOS, assurez-vous d'avoir ajouté les permissions nécessaires dans votr
 # Architecture :
 
  lib/
-├── config/
-├── models/
-├── screens/
-├── widgets/
-├── services/
-├── utils/
-├── blocs/
-└── main.dart
+    ├── config/
+    ├── models/
+      ├── enums/
+    ├── screens/
+    ├── widgets/
+    ├── services/
+    ├── utils/
+    ├── blocs/
+    ├── data/
+    ├── providers/
+    └── main.dart
+    ├── firebase_options.dart
 
 * Créez les fichiers de base dans chaque dossier :
   * Dans `config/` :
     `app_config.dart theme.dart routes.dart`
   * Dans `models/` :
-    `user_model.dart tattoo_model.dart event_model.dart product_model.dart`
+    `user_model.dart tattoo_model.dart event_model.dart product_model.dart post_model.dart social_media_link_model.dart`
+    * Enums/app_the.dart event_type.dart gender_type.dart subscription_type.dart supplier_type.dart tatoo_style.dart user_type.dart
   * Dans `screens/` :
-    `home_screen.dart auth_screen.dart profile_screen.dart tattoo_swipe_screen.dart`
+    `home_screen.dart auth_screen.dart profile_screen.dart tattoo_swipe_screen.dart home_screen.dart edit_profile_screen.dart feed_screen.dart`
   * Dans `widgets/` :
-    `custom_app_bar.dart tattoo_card.dart`
+    `custom_app_bar.dart tattoo_card.dart post_card.dart indicators.dart cached_image.dart tatoo_card.dart`
   * Dans `services/` :
-    `auth_service.dart database_service.dart storage_service.dart`
+    `auth_service.dart database_service.dart storage_service.dart post_service.dart tatoo_service.dart user_service.dart`
   * Dans `utils/` :
-    `constants.dart helpers.dart`
+    `constants.dart helpers.dart file_utils.dart firebase.dart permissions.dart validation.dart`
   * Dans `blocs/` :
-    `auth_bloc.dart tattoo_swipe_bloc.dart`
+    `auth_bloc.dart tattoo_swipe_bloc.dart feed_bloc.dart`
+  * Dans data/:
+    current_user_data.dart current_user_data.freezed.dart
+  * Dans providers/:current_user_data_provider.dart user_provider.dart
