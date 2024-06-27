@@ -25,7 +25,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -54,7 +57,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBsmKnmvpMCNSLl8XJoXBQmuFVNXk5iGv0',
-    appId: '1:1024248956501:android:1cd77608696543c8efb6dc',
+    appId: '1:1024248956501:android:ea85f0c09756f341efb6dc',
     messagingSenderId: '1024248956501',
     projectId: 'test-firebase-916f2',
     storageBucket: 'test-firebase-916f2.appspot.com',
@@ -68,15 +71,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'test-firebase-916f2.appspot.com',
     iosClientId: '1024248956501-n6sughqjgkfa93f2c5kc31g9tt3qrq57.apps.googleusercontent.com',
     iosBundleId: 'com.example.tattooSocialApp',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBAyPngtTVRgN30WL2N0FilPvSZ3250a6I',
-    appId: '1:1024248956501:ios:d81540fe40bef927efb6dc',
-    messagingSenderId: '1024248956501',
-    projectId: 'test-firebase-916f2',
-    storageBucket: 'test-firebase-916f2.appspot.com',
-    iosClientId: '1024248956501-64g07as2k1omdi94b809uddokf91c438.apps.googleusercontent.com',
-    iosBundleId: 'com.example.tattooSocialApp.RunnerTests',
   );
 }

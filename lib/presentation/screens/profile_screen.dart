@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:tattoo_social_app/models/enums/user_type.dart';
-import 'package:tattoo_social_app/models/user_model.dart';
-import 'package:tattoo_social_app/providers/user_provider.dart';
-import 'package:tattoo_social_app/screens/edit_profile_screen.dart';
+import 'package:tattoo_social_app/data/models/enums/user_type.dart';
+import 'package:tattoo_social_app/data/models/user_model.dart';
+import 'package:tattoo_social_app/data/providers/user_provider.dart';
+import 'package:tattoo_social_app/presentation/screens/edit_profile_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -22,7 +22,8 @@ class ProfileScreen extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const EditProfileScreen()),
+                MaterialPageRoute(
+                    builder: (context) => const EditProfileScreen()),
               );
             },
           ),

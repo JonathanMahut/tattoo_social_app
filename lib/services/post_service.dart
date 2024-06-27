@@ -1,11 +1,11 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:tattoo_social_app/models/coment_model.dart';
-import 'package:tattoo_social_app/models/enums/user_type.dart';
-import 'package:tattoo_social_app/models/post_model.dart';
-import 'package:tattoo_social_app/models/user_model.dart';
-import 'package:tattoo_social_app/utils/firebase.dart'; // Assuming your FirebaseUtil class
+import 'package:tattoo_social_app/core/utils/firebase.dart'; // Assuming your FirebaseUtil class
+import 'package:tattoo_social_app/data/models/coment_model.dart';
+import 'package:tattoo_social_app/data/models/enums/user_type.dart';
+import 'package:tattoo_social_app/data/models/post_model.dart';
+import 'package:tattoo_social_app/data/models/user_model.dart';
 
 class PostService {
   final FirebaseUtil _firebaseUtil;
@@ -17,6 +17,8 @@ class PostService {
   Future<void> createPost({
     required UserModel user, // Add required annotation
     required String content, // Add required annotation
+    List<String> mediaUrls = const [], // Initialize with empty lists
+    List<String> mediaTypes = const [], // Initialize with empty lists
     String? imageUrl,
   }) async {
     // Validate user type before proceeding
@@ -27,11 +29,8 @@ class PostService {
     final postRef = await _firebaseUtil.firestore.collection('posts').add({
       'userId': user.id,
       'content': content,
-      'mediaUrls':
-          imageUrl != null ? [imageUrl] : [], // Handle optional image URL
-      'mediaTypes': imageUrl != null
-          ? ['image']
-          : [], // Update with media types if applicable
+      'mediaUrls': mediaUrls, // Handle optional image URL
+      'mediaTypes': mediaTypes, // Update with media types if applicable
       'createdAt': FieldValue.serverTimestamp(),
       'likes': [],
       'comments': [],
@@ -52,13 +51,15 @@ class PostService {
       // Handle potential errors (optional)
     }
     // Upload image to Firebase Storage (if applicable)
-    if (imageUrl != null) {
-      try {
-        await _uploadImage(
-            imageUrl, postRef.id); // Assuming you have an _uploadImage method
-      } catch (error) {
-        print('Error uploading image: $error');
-        // Handle potential upload errors (optional)
+    if (mediaUrls.isNotEmpty) {
+      for (int i = 0; i < mediaUrls.length; i++) {
+        try {
+          await _uploadImage(mediaUrls[i], postRef.id,
+              mediaTypes[i]); // Assuming you have an _uploadImage method
+        } catch (error) {
+          print('Error uploading image: $error');
+          // Handle potential upload errors (optional)
+        }
       }
     }
   }
@@ -118,7 +119,8 @@ class PostService {
     );
   }
 
-  Future<void> _uploadImage(String imageUrl, String postId) async {
+  Future<void> _uploadImage(
+      String imageUrl, String postId, String mediaType) async {
     try {
       // Get a reference to the image storage location (modify path if needed)
       final imageRef = _firebaseUtil.storage.ref().child('posts/$postId');

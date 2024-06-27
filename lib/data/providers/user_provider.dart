@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tattoo_social_app/models/user_model.dart';
+import 'package:tattoo_social_app/core/utils/firebase.dart';
+import 'package:tattoo_social_app/data/models/user_model.dart';
 import 'package:tattoo_social_app/services/user_service.dart';
-import 'package:tattoo_social_app/utils/firebase.dart';
 
 class UserProvider extends ChangeNotifier {
   UserModel? _currentUser;

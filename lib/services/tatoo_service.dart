@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:tattoo_social_app/models/coment_model.dart';
-import 'package:tattoo_social_app/models/tattoo_model.dart';
-import 'package:tattoo_social_app/utils/firebase.dart'; // Assuming your FirebaseUtil class
+import 'package:tattoo_social_app/core/utils/firebase.dart'; // Assuming your FirebaseUtil class
+import 'package:tattoo_social_app/data/models/coment_model.dart';
+import 'package:tattoo_social_app/data/models/tattoo_model.dart';
 
 class TattooService {
   final FirebaseUtil _firebaseUtil;

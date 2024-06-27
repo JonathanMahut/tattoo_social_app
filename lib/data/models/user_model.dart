@@ -1,11 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:tattoo_social_app/models/enums/app_theme.dart';
-import 'package:tattoo_social_app/models/enums/gender_type.dart';
-import 'package:tattoo_social_app/models/enums/user_type.dart';
-import 'package:tattoo_social_app/models/event_model.dart';
-import 'package:tattoo_social_app/models/product_model.dart';
-import 'package:tattoo_social_app/models/social_media_link_model.dart';
-import 'package:tattoo_social_app/providers/user_provider.dart';
+import 'package:tattoo_social_app/data/models/enums/app_theme.dart';
+import 'package:tattoo_social_app/data/models/enums/gender_type.dart';
+import 'package:tattoo_social_app/data/models/enums/user_type.dart';
+import 'package:tattoo_social_app/data/models/event_model.dart';
+import 'package:tattoo_social_app/data/models/product_model.dart';
+import 'package:tattoo_social_app/data/models/social_media_link_model.dart';
+import 'package:tattoo_social_app/data/providers/user_provider.dart';
 
 import 'enums/subscription_type.dart';
 

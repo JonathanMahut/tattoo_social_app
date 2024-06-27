@@ -4,7 +4,7 @@ import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
 import 'package:tattoo_social_app/data/current_user_data.dart';
-import 'package:tattoo_social_app/providers/current_user_data_provider.dart'; // Import Provider
+import 'package:tattoo_social_app/data/providers/current_user_data_provider.dart'; // Import Provider
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;

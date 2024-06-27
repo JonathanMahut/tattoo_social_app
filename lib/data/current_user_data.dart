@@ -1,9 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:tattoo_social_app/models/enums/app_theme.dart';
-import 'package:tattoo_social_app/models/enums/gender_type.dart';
-import 'package:tattoo_social_app/models/enums/subscription_type.dart';
-import 'package:tattoo_social_app/models/event_model.dart';
-import 'package:tattoo_social_app/models/product_model.dart';
+import 'package:tattoo_social_app/data/models/enums/app_theme.dart';
+import 'package:tattoo_social_app/data/models/enums/gender_type.dart';
+import 'package:tattoo_social_app/data/models/enums/subscription_type.dart';
+import 'package:tattoo_social_app/data/models/event_model.dart';
+import 'package:tattoo_social_app/data/models/product_model.dart';
 
 part 'current_user_data.freezed.dart';
 

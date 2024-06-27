@@ -4,11 +4,11 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
-import 'package:tattoo_social_app/providers/user_provider.dart';
+import 'package:tattoo_social_app/data/providers/user_provider.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
+import '../../data/models/post_model.dart';
 import '../blocs/feed_bloc.dart';
-import '../models/post_model.dart';
 
 class FeedScreen extends StatefulWidget {
   const FeedScreen({super.key});
@@ -115,8 +115,8 @@ class PostWidget extends StatelessWidget {
             const SizedBox(width: 8),
             Text(
               post.user.username,
-              style:
-                  const TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+              style: const TextStyle(
+                  fontWeight: FontWeight.bold, color: Colors.white),
             ),
           ],
         ),

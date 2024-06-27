@@ -151,6 +151,42 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:1024248956501:android:ea85f0c09756f341efb6dc",
+        "android_client_info": {
+          "package_name": "com.example.tattoo_social_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1024248956501-0knrvj0ugba33c3ki984g5bomrcv17ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsmKnmvpMCNSLl8XJoXBQmuFVNXk5iGv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1024248956501-0knrvj0ugba33c3ki984g5bomrcv17ai.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1024248956501-0mqulo9f12ahniu6190vq9mbbss8l63k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.messageapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:1024248956501:android:1cd77608696543c8efb6dc",
         "android_client_info": {
           "package_name": "com.tatooconnect.app"

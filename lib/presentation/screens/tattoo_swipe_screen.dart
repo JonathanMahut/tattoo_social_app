@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swipeable_card_stack/swipeable_card_stack.dart';
-import 'package:tattoo_social_app/models/tattoo_model.dart';
+import 'package:tattoo_social_app/data/models/tattoo_model.dart';
 
 class TattooSwipeScreen extends StatefulWidget {
   const TattooSwipeScreen({super.key});

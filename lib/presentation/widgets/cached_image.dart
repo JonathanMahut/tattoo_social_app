@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:tattoo_social_app/widgets/indicators.dart';
+import 'package:tattoo_social_app/presentation/widgets/indicators.dart';
 
 Widget cachedNetworkImage(String imgUrl) {
   return CachedNetworkImage(

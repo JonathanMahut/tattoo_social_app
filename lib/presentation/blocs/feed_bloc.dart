@@ -2,10 +2,10 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tattoo_social_app/models/coment_model.dart';
+import 'package:tattoo_social_app/data/models/coment_model.dart';
 
-import '../models/post_model.dart';
-import '../services/post_service.dart';
+import '../../data/models/post_model.dart';
+import '../../services/post_service.dart';
 
 // Events
 abstract class FeedEvent {}

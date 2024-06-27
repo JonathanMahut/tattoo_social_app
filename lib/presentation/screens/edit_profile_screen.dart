@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
-import 'package:tattoo_social_app/models/user_model.dart';
-import 'package:tattoo_social_app/providers/user_provider.dart';
+import 'package:tattoo_social_app/data/models/user_model.dart';
+import 'package:tattoo_social_app/data/providers/user_provider.dart';
 
 class EditProfileScreen extends StatefulWidget {
   const EditProfileScreen({super.key});

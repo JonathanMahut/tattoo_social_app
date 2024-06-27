@@ -1,8 +1,8 @@
 // lib/models/post_model.dart
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:tattoo_social_app/models/coment_model.dart';
-import 'package:tattoo_social_app/models/user_model.dart';
+import 'package:tattoo_social_app/data/models/coment_model.dart';
+import 'package:tattoo_social_app/data/models/user_model.dart';
 
 class PostModel {
   final String id;

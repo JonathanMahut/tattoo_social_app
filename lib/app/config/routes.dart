@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tattoo_social_app/screens/auth_screen.dart';
-import 'package:tattoo_social_app/screens/feed_screen.dart';
-import 'package:tattoo_social_app/screens/home_screen.dart';
-import 'package:tattoo_social_app/screens/profile_screen.dart';
-import 'package:tattoo_social_app/screens/tattoo_swipe_screen.dart';
+import 'package:tattoo_social_app/presentation/screens/auth_screen.dart';
+import 'package:tattoo_social_app/presentation/screens/feed_screen.dart';
+import 'package:tattoo_social_app/presentation/screens/home_screen.dart';
+import 'package:tattoo_social_app/presentation/screens/profile_screen.dart';
+import 'package:tattoo_social_app/presentation/screens/tattoo_swipe_screen.dart';
 
 class AppRoutes {
   static const String auth = '/auth';
